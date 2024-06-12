@@ -29,7 +29,7 @@
 			if ( WebGL.isWebGL2Available() ) {
 
 				var loader = new THREE.FileLoader();
-				loader.load( new URL( '/app.json', import.meta.url ).href, function ( text ) {
+				loader.load( '/app.json', function ( text ) {
 
 					var player = new APP.Player();
 					player.load( JSON.parse( text ) );
@@ -46,7 +46,7 @@
 
 				} );
 
-				const button = document.createElement( 'a' );
+				let button = document.createElement( 'a' );
 				button.href = 'https://threejs.org/editor/#file=' + location.href.split( '/' ).slice( 0, - 1 ).join( '/' ) + '/app.json';
 				button.style.cssText = 'position: absolute; bottom: 20px; right: 20px; padding: 10px 16px; color: #fff; border: 1px solid #fff; border-radius: 20px; text-decoration: none;';
 				button.target = '_blank';

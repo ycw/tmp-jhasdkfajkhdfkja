@@ -8,7 +8,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"three": "^0.165.0",
+		"three": "github:mrdoob/three.js#dev",
 		"vite": "^5.2.13"
 	}
   }
